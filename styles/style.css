@@ -1,0 +1,316 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+/*
+// <uniquifier>: Use a unique and descriptive class name
+// <weight>: Use a value from 400 to 700
+
+.lora-<uniquifier> {
+  font-family: "Lora", serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+
+// <uniquifier>: Use a unique and descriptive class name
+// <weight>: Use a value from 300 to 800
+
+.open-sans-<uniquifier> {
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
+*/
+
+/* HEADER */
+
+/* 
+bba694 = A3B18A  =  232323
+ffffd5 =         =
+9b7239 = 588157  = 88715b
+7a551c = 3A5A40  =
+*/
+
+
+
+body {
+    background-color: #373636;
+}
+
+.header {
+    position: relative;
+    display: flex;
+    margin-left: 3rem;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    font-family: "Open Sans", sans-serif;
+}
+
+.header__logo {
+    padding: 1.5rem;
+    margin: 2rem;
+    font-size: 2rem;
+    font-family: "Lora", serif;
+    text-decoration: none;
+    color: #DAD7CD;
+    background: #88715b;
+    font-weight: 700;
+}
+
+.header__nav {
+    position: relative;
+    display: flex;
+}
+
+.header__list {
+    display: flex;
+    list-style-type: none;
+}
+
+.header__listLink {
+    text-decoration: none;
+    color: #88715b;
+    font-weight: 600;
+    margin-right: 5rem;
+    transition: 0.3;
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+
+.header__listLink:hover {
+    color: #ffffd5;
+}
+
+.header__botonLista{
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color:#7a551c;
+    font-size: 1.6rem;
+  }
+
+
+/* CONTENIDO */
+
+.contenedor {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contenedor__titulo {
+    font-family: "Lora", serif;
+    font-size: 4.5rem;
+    color: #7a551c;
+    line-height: 0.5;
+    margin-left: 4rem;
+    
+}
+.contenedor__titulo h2 {
+    font-size: 5rem;
+    text-transform: uppercase;
+    color: #88715b;
+    line-height: 1;
+}
+
+.contenedor__titulo h2 span {
+    background: #88715b;
+    color: #ffffd5;
+    padding: 0.625rem;
+    font-family: "Lora", serif;
+    font-weight: 600;
+
+}
+
+.contenedor__titulo p {
+    font-size: 2.8rem;
+    line-height: 0.5;
+    color: #88715b;
+    font-family: "Lora", serif;
+    font-weight: 600;
+    margin-bottom: 1.25rem;
+    line-height: 0.9;
+}
+
+.contenedor__reserva {
+    font-size: 1rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #ffffd5;
+    background: #88715b;
+    padding: 0.625rem 1.25rem;
+    margin-left: auto;
+    border-radius: 1rem;
+    letter-spacing: 0.2rem;
+    transition: 0.3s;
+    margin-top: 1.875rem;
+}
+
+.contenedor__reserva:hover {
+    color: #ccab8f;
+    background: #ffffd5;
+    transition: 2 ease;
+}
+
+.contenedor__contenido {
+    width: 100%;
+    max-width: 80rem;
+    
+}
+
+.contenedor__img {
+    width: 100%;
+    max-width: 70rem;
+}
+
+/* Media query para pantallas de hasta 768px de ancho */
+
+
+@media (max-width: 768px) {
+    .header {
+        margin-left: 0;
+        justify-content: center;
+    }
+
+    .header__nav {
+        margin-top: 2rem;
+    }
+
+    .header__listLink {
+        margin-right: 2rem;
+    }
+
+    .contenedor {
+        flex-direction: column;
+    }
+
+    .contenedor__img,
+    .contenedor__contenido {
+        width: 100%;
+        max-width: none;
+        padding: 0;
+    }
+}
+
+/* Estilos para el botón de hamburguesa */
+.header__botonLista {
+    display: none; /* Inicialmente oculto en pantallas grandes */
+}
+
+/* Icono de hamburguesa */
+.fa-bars::before {
+    content: "\f0c9"; /* Código de la hamburguesa en FontAwesome */
+}
+
+/* Media query para pantallas pequeñas */
+@media screen and (max-width: 768px) {
+    /* Mostrar el botón de hamburguesa */
+    .header__botonLista {
+        display: block;
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        color: #7a551c;
+        cursor: pointer;
+        position: absolute; /* Ajustar posición */
+        top: 1rem; /* Ajustar posición */
+        right: 1rem; /* Ajustar posición */
+    }
+
+    /* Ajustar posición de la lista */
+    .header__list {
+        position: absolute;
+        top: 5rem; /* Ajustar posición */
+        right: 0; /* Ajustar posición */
+        background-color: #9b7239;
+        padding: 1rem;
+        display: none; /* Inicialmente oculto */
+        flex-direction: column;
+    }
+
+    /* Mostrar la lista cuando se hace clic en el botón de hamburguesa */
+    .header__botonLista:focus + .header__nav .header__list {
+        display: flex;
+    }
+
+    /* Estilos para los elementos de la lista */
+    .header__elementoLista {
+        margin-bottom: 1rem;
+    }
+
+    .header__listLink {
+        text-decoration: none;
+        color: #ffffd5;
+        font-weight: 600;
+        transition: color 0.3s;
+    }
+
+    .header__listLink:hover {
+        color: #7a551c;
+    }
+}
+
+
+/* MAIN  */
+
+/* CARDS */
+
+.contenedor__cards {
+    margin-top: 5rem;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 18rem;
+    border-radius: .5rem;
+    overflow: hidden;
+    margin: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card__imagen {
+    width: 100%;
+    height: auto;
+}
+
+.card__contenido {
+    padding: 20px;
+}
+
+.card__titulo {
+    margin-top: 0;
+    font-size: 1.5rem;
+    color: #88715b;
+    font-family: "Lora", serif;
+}
+
+.card__texto {
+    font-size: 1rem;
+    color: #818181;
+    font-family: "Open Sans", sans-serif;
+    text-align: justify;
+
+
+}
+
+.card__link {
+    display: inline-block;
+    margin-top: 10px;
+    color: #88715b;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.card__link:hover {
+    text-decoration: underline;
+}
