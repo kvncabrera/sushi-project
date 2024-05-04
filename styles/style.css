@@ -352,7 +352,7 @@ h3{
 .lightbox.activo{
     opacity: 1;
     transform: scale(1);
-    pointer-events: none;
+    pointer-events: auto;
 }
 .lightbox .cerrar{
     width: 5em;
