@@ -3,14 +3,12 @@
 
 .lora-<uniquifier> {
   font-family: "Lora", serif;
-  font-optical-sizing: auto;
   font-weight: <weight>;
   font-style: normal;
 }
 
 .open-sans-<uniquifier> {
   font-family: "Open Sans", sans-serif;
-  font-optical-sizing: auto;
   font-weight: <weight>;
   font-style: normal;
   font-variation-settings:
@@ -69,7 +67,7 @@ body {
     color: #88715b;
     font-weight: 600;
     margin-right: 5rem;
-    transition: 0.3;
+    transition: 0.3s;
     font-size: 1rem;
     text-transform: uppercase;
 }
@@ -195,7 +193,7 @@ body {
 .contenedor__reserva:hover {
     color: #ccab8f;
     background: #ffffd5;
-    transition: 2 ease;
+    transition: 2s ease;
 }
 
 .contenedor__contenido {
@@ -218,7 +216,6 @@ body {
     text-transform: uppercase;
     color: #88715b;
     font-family: "Lora", serif;
-    font-optical-sizing: auto;
     font-style: normal;
     text-align: center;
     font-size: 2rem;
@@ -311,7 +308,6 @@ h3{
     text-transform: uppercase;
     color: #88715b;
     font-family: "Lora", serif;
-    font-optical-sizing: auto;
     font-style: normal;
     text-align: center;
     font-size: 2rem;
@@ -356,7 +352,7 @@ h3{
 .lightbox.activo{
     opacity: 1;
     transform: scale(1);
-    pointer-events: auto;
+    pointer-events: none;
 }
 .lightbox .cerrar{
     width: 5em;
@@ -388,7 +384,6 @@ h3{
     text-transform: uppercase;
     color: #88715b;
     font-family: "Lora", serif;
-    font-optical-sizing: auto;
     font-style: normal;
     text-align: center;
     font-size: 2rem;
